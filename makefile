@@ -11,13 +11,13 @@ zoo: zoo.o Animal.o AnimalsInZoo.o
 
 	
 # Specify how the object files should be created from source files
-zoo.o: zoo.cpp
+zoo.o: zoo.cpp Animal.h AnimalsInZoo.h
 	g++ -Wall -Wextra -c zoo.cpp
 
-Animal.o: Animal.cpp
+Animal.o: Animal.cpp Animal.h
 	g++ -Wall -Wextra -c Animal.cpp
 
-AnimalsInZoo.o: AnimalsInZoo.cpp
+AnimalsInZoo.o: AnimalsInZoo.cpp AnimalsInZoo.h
 	g++ -Wall -Wextra -c AnimalsInZoo.cpp
 
 # Specify the object files and executables that are generated
